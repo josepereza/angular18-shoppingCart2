@@ -1,0 +1,28 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="listado">Navbar</a>
+
+    <a
+      class="nav-link"
+      [routerLink]="['/cart']"
+      routerLinkActive="router-link-active"
+    >
+      <i class="bi bi-cart fs-3"></i>
+      <span
+        class="position-absolute mt-2 top-140 start-280 translate-middle badge rounded-pill bg-danger"
+      >
+        {{ cartItemCount() }}
+      </span>
+    </a>
+  </div>
+  <form class="d-flex ms-2">
+    <input
+      class="form-control"
+      type="search"
+      placeholder="Search"
+      aria-label="Search"
+      [formControl]="search"
+    />
+    <a class="btn btn-outline-success" routerLink="/products">Search</a>
+  </form>
+</nav>
