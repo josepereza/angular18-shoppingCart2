@@ -17,5 +17,8 @@ getProducto(){
 return this.http.get<Producto[]>(this.urlApi)
 }
 
+getProductoById(id:number){
+  return this.http.get<Producto>(`${this.urlApi}/${id}`)
+}
 
 }
